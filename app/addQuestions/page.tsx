@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { userQuestion } from './query'
+import { useUserQuestion } from './query'
 import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
@@ -22,7 +22,7 @@ const Page = () => {
     setAnswersArray([answer1, answer2, answer3, answer4, answer5]);
   }, [answer1, answer2, answer3, answer4, answer5]);
 
-  const {addUserQuestion, addingQuestion, questionSuccess} = userQuestion()
+  const {addUserQuestion, addingQuestion, questionSuccess} = useUserQuestion()
 
  
 

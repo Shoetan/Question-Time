@@ -24,7 +24,7 @@ const deleteQuestion = async ( id: any ) => {
   return data;
 };
 
-export const userDeleteQuestion = () =>{
+export const useUserDeleteQuestion = () =>{
 
   const queryClient = useQueryClient()
   const {mutate, isPending, isSuccess} = useMutation ({

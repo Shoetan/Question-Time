@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import { userDeleteQuestion } from '@/app/getQuestions/query';
+import { useUserDeleteQuestion } from '@/app/getQuestions/query';
 
 const DisplayQuestion = ({ id, question, options }: { id: any; question: string; options: string[]}) => {
   const [newOption, setNewOption] = useState('');
@@ -20,7 +20,7 @@ const DisplayQuestion = ({ id, question, options }: { id: any; question: string;
     setCurrentOptions(updatedOptions);
   };
 
-  const {deleteUserQuestion}= userDeleteQuestion()
+  const {deleteUserQuestion}= useUserDeleteQuestion()
 
   const handleDeleteQuestion = () => {
     deleteUserQuestion(id)
