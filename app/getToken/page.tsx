@@ -8,7 +8,7 @@ import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 
-const page = () => {
+const Page = () => {
 
   const {getUserToken, gettingToken, tokenSuccess} = userToken()
 
@@ -37,4 +37,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

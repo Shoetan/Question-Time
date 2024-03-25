@@ -7,7 +7,7 @@ import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 
-const page = () => {
+const Page = () => {
   const [question, setQuestion ] = useState("")
   const [answer1, setAnswer1] = useState("")
   const [answer2, setAnswer2] = useState("")
@@ -20,7 +20,7 @@ const page = () => {
 
   useEffect(() => {
     setAnswersArray([answer1, answer2, answer3, answer4, answer5]);
-  }, [answer1, answer2, answer3]);
+  }, [answer1, answer2, answer3, answer4, answer5]);
 
   const {addUserQuestion, addingQuestion, questionSuccess} = userQuestion()
 
@@ -57,4 +57,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

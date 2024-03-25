@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import DisplayQuestion from '@/components/DisplayQuestion'
 
 
-const page = () => {
+const Page = () => {
 
 
   const {questionsData, isLoading} = useGetQuestionsQuery()
@@ -51,4 +51,4 @@ console.log(filteredData);
   )
 }
 
-export default page
+export default Page
