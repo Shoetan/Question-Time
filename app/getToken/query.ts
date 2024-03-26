@@ -12,7 +12,7 @@ type IPayload = {
 const getToken = async (payload:IPayload) => {
   const response = await apiInstance.post("/token", payload)
   const {data} = response
-  localStorage.setItem("token", data?.token)
+  window.localStorage.setItem("token", data?.token)
   return data
 }
 
