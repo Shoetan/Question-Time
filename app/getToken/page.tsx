@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { userToken } from './query'
+import { useUserToken } from './query'
 import { useState } from 'react'
 import { get } from 'https'
 import { Loader2 } from 'lucide-react'
@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation'
 
 const Page = () => {
 
-  const {getUserToken, gettingToken, tokenSuccess} = userToken()
+  const {getUserToken, gettingToken, tokenSuccess} = useUserToken()
 
   const router = useRouter()
 

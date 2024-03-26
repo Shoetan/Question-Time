@@ -16,7 +16,7 @@ const getToken = async (payload:IPayload) => {
   return data
 }
 
-export const userToken = () =>{
+export const useUserToken = () =>{
   const {mutate, isPending, isSuccess} = useMutation ({
     mutationFn:(payload:IPayload) =>{
       return getToken(payload)
