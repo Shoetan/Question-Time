@@ -3,6 +3,7 @@
 
 import apiInstance from "@/app/api/apiInstance";
 import { useMutation } from "@tanstack/react-query";
+import { setToken } from "../utils/auth";
 
 
 type IPayload = {
@@ -12,11 +13,11 @@ type IPayload = {
 const getToken = async (payload:IPayload) => {
   const response = await apiInstance.post("/token", payload)
   const {data} = response
-  localStorage.setItem("token", data?.token)
+  setToken(data?.token)
   return data
 }
 
-export const userToken = () =>{
+export const useUserToken = () =>{
   const {mutate, isPending, isSuccess} = useMutation ({
     mutationFn:(payload:IPayload) =>{
       return getToken(payload)

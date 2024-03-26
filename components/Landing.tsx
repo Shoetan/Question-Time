@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation';
+import { getToken } from '@/app/utils/auth';
 
 
 /* Notes
@@ -16,7 +17,7 @@ const Landing = () => {
 
 
 /* Get token from local storage */
-const token = localStorage.getItem('token')
+const token = getToken()
 
 const router = useRouter()
 

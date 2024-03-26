@@ -2,27 +2,27 @@
 
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { userQuestion } from './query'
+import { useUserQuestion } from './query'
 import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 
-const page = () => {
-  const [question, setQuestion ] = useState("")
-  const [answer1, setAnswer1] = useState("")
-  const [answer2, setAnswer2] = useState("")
-  const [answer3, setAnswer3] = useState("")
-  const [answer4, setAnswer4] = useState("")
-  const [answer5, setAnswer5] = useState("")
-  const [answersArray, setAnswersArray] = useState([]);
+const Page = () => {
+  const [question, setQuestion ] = useState <string>("")
+  const [answer1, setAnswer1] = useState <string>("")
+  const [answer2, setAnswer2] = useState <string>("")
+  const [answer3, setAnswer3] = useState <string>("")
+  const [answer4, setAnswer4] = useState <string>("")
+  const [answer5, setAnswer5] = useState <string>("")
+  const [answersArray, setAnswersArray] = useState<string[]>([]);
 
   const router = useRouter()
 
   useEffect(() => {
     setAnswersArray([answer1, answer2, answer3, answer4, answer5]);
-  }, [answer1, answer2, answer3]);
+  }, [answer1, answer2, answer3, answer4, answer5]);
 
-  const {addUserQuestion, addingQuestion, questionSuccess} = userQuestion()
+  const {addUserQuestion, addingQuestion, questionSuccess} = useUserQuestion()
 
  
 
@@ -57,4 +57,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

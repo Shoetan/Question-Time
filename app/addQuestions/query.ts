@@ -16,7 +16,7 @@ const addQuestion = async (payload:IPayload) => {
   return data
 }
 
-export const userQuestion = () =>{
+export const useUserQuestion = () =>{
   const {mutate, isPending, isSuccess} = useMutation ({
     mutationFn:(payload:IPayload) =>{
       return addQuestion(payload)

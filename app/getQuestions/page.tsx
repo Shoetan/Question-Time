@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import DisplayQuestion from '@/components/DisplayQuestion'
 
 
-const page = () => {
+const Page = () => {
 
 
   const {questionsData, isLoading} = useGetQuestionsQuery()
@@ -21,11 +21,11 @@ const page = () => {
 
   // Extracting only the questions and answers from the object
 
-const filteredData = Object.entries(questionsData).map(([key, value]) => ({
-  id: key,
-  question: value.question,
-  options: value.options
-}));
+  const filteredData = Object.entries(questionsData).map(([key, value]) => ({
+    id: key,
+    question: (value as { question: string }).question, // Type assertion
+    options: (value as { options: string[] }).options // Type assertion
+  }));
 
 console.log(filteredData);
   return (
@@ -51,4 +51,4 @@ console.log(filteredData);
   )
 }
 
-export default page
+export default Page
