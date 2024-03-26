@@ -8,13 +8,13 @@ import { useRouter } from 'next/navigation'
 
 
 const Page = () => {
-  const [question, setQuestion ] = useState("")
-  const [answer1, setAnswer1] = useState("")
-  const [answer2, setAnswer2] = useState("")
-  const [answer3, setAnswer3] = useState("")
-  const [answer4, setAnswer4] = useState("")
-  const [answer5, setAnswer5] = useState("")
-  const [answersArray, setAnswersArray] = useState([]);
+  const [question, setQuestion ] = useState <string>("")
+  const [answer1, setAnswer1] = useState <string>("")
+  const [answer2, setAnswer2] = useState <string>("")
+  const [answer3, setAnswer3] = useState <string>("")
+  const [answer4, setAnswer4] = useState <string>("")
+  const [answer5, setAnswer5] = useState <string>("")
+  const [answersArray, setAnswersArray] = useState<string[]>([]);
 
   const router = useRouter()
 
