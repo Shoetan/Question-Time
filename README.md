@@ -5,6 +5,8 @@ QuestionTime (QT) is a Software-as-a-Service (SaaS) platform that allows registe
 ## Technologies Used
 - Next.js 14
 - Tailwind CSS
+- Typescript
+- React query
 
 ## Getting Started
 To get started with QuestionTime, follow these steps:
